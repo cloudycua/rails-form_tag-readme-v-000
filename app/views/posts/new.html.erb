@@ -2,7 +2,8 @@
 
 <!-- <form action="<%= posts_path %>" method="POST">   -->
      <%= form_tag posts_path do %>
-<!-- generates
+<!-- Rails helper is smart enough to know that we want to submit the form via the POST method
+     auto renders the HTML from above and generates
      <form action="/posts" accept-charset="UTF-8" method="post">
      <input name="utf8" type="hidden" value="&#x2713;" />
      <input type="hidden" name="authenticity_token" value=
@@ -14,8 +15,8 @@
        <label>Post description: </label><br>
        <textarea type="text" id="post_description" name="post[description]"></textarea><br>
 
-<!--   form_tag auto generates the necessary authenticity token, so hidden_field_tag can be removed 
-       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">  
+<!--   form_tag auto generates the necessary authenticity token, so hidden_field_tag can be removed
+       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>    -->
        <input type="submit" value="Submit Post">
      <% end %>
