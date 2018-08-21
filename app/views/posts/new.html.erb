@@ -14,7 +14,8 @@
        <%= text_field_tag :'post[title]' %><br>
 
        <label>Post description: </label><br>
-       <textarea type="text" id="post_description" name="post[description]"></textarea><br>
+<!--   <textarea type="text" id="post_description" name="post[description]"></textarea><br>    -->
+       <%= text_area_tag :'post[description]' %><br>
 
 <!--   form_tag auto generates the necessary authenticity token, so hidden_field_tag can be removed
        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
