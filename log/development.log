@@ -436,3 +436,28 @@ SyntaxError (/home/cloudycua/rails-form_tag-readme-v-000/app/views/posts/new.htm
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.8ms)
+
+
+Started GET "/posts/new" for 24.228.153.119 at 2018-08-21 01:12:34 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (26.3ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `hidden_field_tage' for #<#<Class:0x00000003c37370>:0x007f01e9b513b8>
+Did you mean?  hidden_field_tag
+               hidden_field):
+    10:        <textarea type="text" id="post_description" name="post[description]"></textarea><br>
+    11: 
+    12: <!--   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">   -->
+    13:        <%= hidden_field_tage :authenticity_token, form_authenticity_token %>
+    14:        <input type="submit" value="Submit Post">
+    15:      <% end %>
+    16: 
+  app/views/posts/new.html.erb:13:in `block in _app_views_posts_new_html_erb__576106911710112868_69823096304320'
+  app/views/posts/new.html.erb:4:in `_app_views_posts_new_html_erb__576106911710112868_69823096304320'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.6ms)
