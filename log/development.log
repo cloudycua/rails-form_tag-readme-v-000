@@ -379,3 +379,19 @@ ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticit
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.0ms)
+
+
+Started GET "/posts/new" for 24.228.153.119 at 2018-08-21 01:05:26 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 24.228.153.119 at 2018-08-21 01:05:31 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"ttttt", "description"=>"ddddd"}, "authenticity_token"=>"IUBXC+dY4+xFT8co0p33v4YEh1Psi78Cs1K+qyA9fErkRns3MdYFDDImDCuP8bMTB/eT3wKpow6QQA5z2BdOJQ=="}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "ttttt"], ["description", "ddddd"], ["created_at", "2018-08-21 01:05:31.546992"], ["updated_at", "2018-08-21 01:05:31.546992"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Redirected to http://174.138.35.103:35289/posts
+Completed 302 Found in 15ms (ActiveRecord: 3.0ms)
