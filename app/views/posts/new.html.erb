@@ -2,7 +2,10 @@
 
 <!-- <form action="<%= posts_path %>" method="POST">   -->
      <%= form_tag posts_path do %>
-
+<!-- generates
+     <form action="/posts" accept-charset="UTF-8" method="post">
+     <input name="utf8" type="hidden" value="&#x2713;" />
+-->     
        <label>Post title: </label><br>
        <input type="text" id="post_title" name="post[title]"><br>
 
